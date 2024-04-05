@@ -1,0 +1,49 @@
+'''
+Considere a lista numeros = [1,5,3,6,22,45,63,30,344,22,12,25,10].
+Escreva um programa em Python que implementa as seguintes instruções:
+
+a) Apresenta o comprimento da lista.
+b) Apresenta o máximo e mínimo da lista.
+c) Acrescenta ao final da lista os elementos da lista:
+numeros2 = [21,53,23,54,22,2,1,13]
+d) Altera a lista numeros por forma a que fique ordenada.
+e) Indica qual o elemento que aparece mais, indicando o índice da primeira
+ocorrência na lista.
+f) Imprime os elementos da lista numa só linha e separados por “-”.
+g) Imprime os elementos de índice ímpar.
+h) Imprime os elementos que são múltiplos de 5.
+'''
+
+numeros = [1, 5, 3, 6, 22, 45, 63, 30, 344, 22, 12, 25, 10]
+
+# a) Comprimento da lista
+print("Comprimento da lista:", len(numeros))
+
+# b) Máximo e mínimo da lista
+print("Máximo da lista:", max(numeros))
+print("Mínimo da lista:", min(numeros))
+
+# c) Acrescentando os elementos da lista numeros ao final de numeros
+numeros2 = [21, 53, 23, 54, 22, 2, 1, 13]
+numeros.extend(numeros2)
+print("Lista após acrescentar elementos de numeros2:", numeros)
+
+
+# d) Ordenando a lista
+numeros.sort()
+print("Lista ordenada:", numeros)
+
+# e) Encontrando o elemento mais comum e seu índice
+moda = max(set(numeros), key=numeros.count)
+indice = numeros.index(moda)
+print("Elemento mais comum:", moda)
+print("Índice da primeira ocorrência na lista:", indice)
+
+# f) Imprimindo os elementos da lista separados por "-"
+print("Elementos da lista separados por '-':", '-'.join(map(str, numeros)))
+
+# g) Imprimindo os elementos de índice ímpar
+print("Elementos de índice ímpar:", numeros[1::2])
+
+# h) Imprimindo os elementos que são múltiplos de 5
+print("Elementos múltiplos de 5:", [num for num in numeros if num % 5 == 0])
