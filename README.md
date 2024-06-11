@@ -1,4 +1,3 @@
-# Python
 # This will be were I will be learning Python and the basics of Git / Git Hub
 # This is still a work in progress and I will update it when I can.
 # I will be following files from my professor at ISTEC and also the website: https://wiki.python.org.br/ListaDeExercicios
