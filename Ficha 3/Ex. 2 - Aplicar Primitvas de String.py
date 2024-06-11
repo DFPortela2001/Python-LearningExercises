@@ -1,3 +1,11 @@
+'''
+Dada a seguinte string:
+
+str1 = 'a amada lisboa e o rio tejo belo encantam toda a gente'
+Aplique as primitivas da classe string (index, count, in, seletor [:], len, replace,
+etc.) para apresentar os seguintes resultados:
+'''
+
 str1 = 'a amada lisboa e o rio tejo belo encantam toda a gente'
 
 # a) Imprima os carateres a partir da 1a posição da letra 'b':

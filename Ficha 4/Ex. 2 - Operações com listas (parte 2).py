@@ -1,3 +1,8 @@
+'''
+Crie uma lista, chamada lista1, com os seguintes valores: 'Iva', 25, 'Rui', 19,
+'Rato', 'abc', 33
+'''
+
 lista1 = ['Iva',25,'Rui',19,'Rato','abc',33]
 #A Imprimir a lista toda:
 print(lista1)

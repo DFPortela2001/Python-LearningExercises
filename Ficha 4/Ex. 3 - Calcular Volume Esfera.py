@@ -1,3 +1,9 @@
+'''
+Escreva um programa que calcule o volume de uma esfera, usando uma função
+criada por si. A função deve calcular o volume da esfera e devolver o resultado
+ao programa chamante que, por sua vez, deve imprimi-lo.
+'''
+
 import math
 
 def calcular_Volume():

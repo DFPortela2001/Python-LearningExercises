@@ -1,3 +1,8 @@
+'''
+Considere o tuplo numeros = (10,15,3,6,99,45,63,30,344,22,4,25,10).
+Escreva um programa em Python que implementa as seguintes instruções:
+'''
+
 def main():
     numeros = (10, 15, 3, 6, 99, 45, 63, 30, 344, 22, 4, 25, 10)
 

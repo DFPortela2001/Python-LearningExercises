@@ -1,3 +1,8 @@
+'''
+Escreva um programa que, usando ciclos, peça ao utilizador para digitar um número
+inteiro pequeno, correspondente a um número de linhas, para desenhar um padrão de
+asteriscos.
+'''
 def asteriscos():
     num_linhas = int(input("Escreve um número: "))
         # Verificar se o número é positivo
