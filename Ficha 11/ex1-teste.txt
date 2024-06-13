@@ -1,0 +1,4 @@
+Este é um exemplo de um ficheiro de texto.
+Ele contém várias linhas de texto.
+Cada linha será analisada pelo programa.
+Vamos contar as vogais, consoantes, palavras e linhas.
