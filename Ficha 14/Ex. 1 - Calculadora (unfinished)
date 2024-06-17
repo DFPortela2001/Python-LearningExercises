@@ -1,0 +1,107 @@
+'''
+Crie uma calculadora com as funcionalidades básicas, tais como: somar, subtrair,
+multiplicar e dividir; e algumas científicas elementares tais como: sqrt(), log(),
+sin(), etc..
+
+Nota: utilizar exceções:
+
+1) Na leitura dos dados (se os dados são ou não numéricos)
+
+2) Na função dividir (divisão por zero, ilegal)
+'''
+
+
+import math
+def main():
+    while True:
+        print('\nCalculadora\n')
+        print('1 - Soma')
+        print('2 - Subtração')
+        print('3 - Multiplicação')
+        print('4 - Divisão')
+        print('5 - Raiz Quadrada')
+        print('6 - Logaritmo')
+        print('7 - Seno')
+        print('8 - Cosseno')
+        print('9 - Tangente')
+        print('10 - Sair')
+        escolha = int(input('Escolha a operação a realizar: '))
+
+        
+        #SOMA
+        if escolha == 1:
+                try:
+                    n = int(input('Quantos números você deseja somar? '))
+                    soma = 0.0
+                    for i in range(n):
+                        num = float(input(f'Digite o {i+1}º número: '))
+                        soma += num
+                        print(f'A soma dos números é: {soma:.6f}')
+                except ValueError:
+                    print('Erro: Entrada inválida')
+                    continue
+        #SUBTRAÇÃO
+        if escolha == 2:
+            try:
+                n = int(input('Quantos números você deseja subtrair? '))
+                subtracao = 0.0
+                for i in range(n):
+                    num = float(input(f'Digite o {i+1}º número: '))
+                    if i == 0:
+                        subtracao = num
+                    else:
+                        subtracao -= num
+                        print(f'A subtração dos números é: {subtracao:.6f}')
+            except ValueError:
+                print('Erro: Entrada inválida')
+                continue
+        #MULTIPLICAÇÃO
+        if escolha == 3:
+            try:
+                n = int(input('Quantos números você deseja multiplicar? '))
+                multiplicacao = 0.0
+                for i in range(n):
+                    num = float(input(f'Digite o {i+1}º número: '))
+                    if i == 0:
+                        multiplicacao = num
+                    else:
+                        multiplicacao *= num
+                        print(f'A multiplicação dos números é: {multiplicacao:.6f}')
+            except ValueError:
+                print('Erro: Entrada inválida')
+                continue
+        #DIVISÃO
+        '''
+        if escolha == 4:
+            try:
+                n = int(input('Quantos números você deseja dividir? '))
+                divisao = 0.0
+                for i in range(n):
+                    num = float(input(f'Digite o {i+1}º número: '))
+                    try:
+                        if i == 0:
+                            divisao = num
+                    except:
+                        print('Erro: Divisão por zero')
+                        continue
+                    else:
+                        divisao /= num
+                        print(f'A divisão dos números é: {divisao:.6f}')
+            except ValueError:
+                print('Erro: Entrada inválida')
+                continue
+        '''
+        #SAIR
+        if escolha == 10:
+            print('Bye Bye')
+            break
+
+        
+        if escolha not in [1,2,3,4,5,6,7,8,9,10]:
+            print('Opção inválida')
+            continue
+
+
+
+if __name__ == "__main__":
+    main()

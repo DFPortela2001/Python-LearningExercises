@@ -1,0 +1,72 @@
+'''
+Crie uma classe empregado, com os seguintes atributos:
+• numero
+• nome
+• sal_Bruto
+• salLiquido
+• taxa_IRS
+• tax_aSS
+E os seguintes métodos:
+calcIRS()
+calcSS()
+calcSalLiquido()
+Levando em consideração as seguintes condições:
+Se salário bruto >= 2000.00, taxa irs = 25%
+Se salário bruto >= 1000.00 && < 2000.00, taxa irs = 20%
+Se salário bruto < 1000.00, taxa irs = 17.5%
+SS = taxa fixa de 11%
+Crie um objeto a partir desta classe, leia um salário bruto digitado e apresente
+no ecrã todos os cálculos pretendidos (Bruto, IRS, SS e Líquido).
+'''
+
+class Empregado:
+    def __init__(self, numero, nome, sal_Bruto):
+        self.numero = numero
+        self.nome = nome
+        self.sal_Bruto = sal_Bruto
+        self.sal_Liquido = 0.0
+        self.taxa_IRS = 0.0
+        self.taxa_SS = 0.11
+
+#CALCULAR A TAXA DE IRS A SER USADA
+    def calcIRS(self):
+        if self.sal_Bruto >= 2000.00:
+            self.taxa_IRS = 0.25
+        elif self.sal_Bruto >= 1000.00:
+            self.taxa_IRS = 0.20
+        else:
+            self.taxa_IRS = 0.175
+#SEGURANÇA SOCIAL TEM TAXA FIXA 11%    
+    def calcSS(self):
+        pass
+#CALCULAR SALARIO LIQUIDO   
+    def calc_Sal_Liquido(self):
+        self.calcIRS()
+        self.calcSS()
+        valorIRS = self.sal_Bruto * self.taxa_IRS
+        valorSS = self.sal_Bruto * self.taxa_SS
+        self.salLiquido = self.sal_Bruto - (valorIRS + valorSS)
+        return valorIRS, valorSS
+#FORMA DE IMPRIMIR A CLASSE    
+    def __str__(self):
+        return (f"Empregado: \n{self.nome} - Nº {self.numero}\n"
+                f"Salário Bruto: {self.sal_Bruto:.2f}\n"
+                f"Taxa IRS: {self.taxa_IRS * 100:.2f}%\n"
+                f"O valor de IRS pago é: {self.taxa_IRS * self.sal_Bruto}\n"
+                f"Taxa Segurança Social: {self.taxa_SS * 100:.2f}%\n"
+                f"O valor de Segurança Social pago é: {self.taxa_SS * self.sal_Bruto}\n"
+                f"Salário Líquido: {self.salLiquido:.2f}")
+
+def main():
+    numero = int(input("Escreva o número do empregado: "))
+    nome = input("Escreva o nome do empregado: ")
+    sal_Bruto = float(input("Quanto é o salário bruto do empregado? "))
+    empregado = Empregado(numero, nome, sal_Bruto)
+    empregado.calc_Sal_Liquido()
+    
+    print(empregado)
+
+if __name__ == "__main__":
+    main()
+
+
